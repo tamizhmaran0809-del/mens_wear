@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 CATALOG.push(newProduct);
 
+
 // persist so it survives page navigation
 try{
   const added = JSON.parse(localStorage.getItem('mf_added_products')) || [];
