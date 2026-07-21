@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Details — Rovaire</title>
+<meta name="description" content="Product details, sizing, delivery and reviews on Rovaire.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/product.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div id="pageLoader"><div class="loader-mark">ROVAIRE</div></div>
+
+<header class="site-header">
+  <div class="container header-top">
+    <button class="icon-btn mobile-toggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+    <a href="index.html" class="brand">ROV<span class="accent">AIRE</span></a>
+    <ul class="mega-nav">
+      <li><a href="collection.html">Shop <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="mega-panel">
+          <div><h6>Topwear</h6><a href="collection.html?cat=shirts">Shirts</a><a href="collection.html?cat=tshirts">T-Shirts</a><a href="collection.html?cat=hoodies">Hoodies</a></div>
+          <div><h6>Bottomwear</h6><a href="collection.html?cat=jeans">Jeans</a><a href="collection.html?cat=trousers">Trousers</a></div>
+          <div><h6>Outerwear</h6><a href="collection.html?cat=jackets">Jackets</a><a href="collection.html?cat=blazers">Blazers</a><a href="collection.html?cat=ethnic-wear">Ethnic Wear</a></div>
+        </div>
+      </li>
+      <li><a href="collection.html?occasion=formal-wear">Formal</a></li>
+      <li><a href="collection.html?occasion=casual-wear">Casual</a></li>
+      <li><a href="collection.html?occasion=ethnic-wear">Ethnic</a></li>
+      <li><a href="collection.html">New Arrivals</a></li>
+    </ul>
+    <div class="search-bar">
+      <i class="fa-solid fa-magnifying-glass" style="color:var(--ink-soft);"></i>
+      <input type="text" placeholder="Search for shirts, jeans, brands…">
+      <button aria-label="Search"><i class="fa-solid fa-arrow-right"></i></button>
+      <div class="live-search-panel"></div>
+    </div>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+      <a href="login.html" class="icon-btn" aria-label="Account"><i class="fa-regular fa-user"></i></a>
+      <a href="cart.html" class="icon-btn" aria-label="Wishlist" style="position:relative;"><i class="fa-regular fa-heart"></i><span class="count wishlist-count">0</span></a>
+      <a href="cart.html" class="icon-btn" aria-label="Cart" style="position:relative;"><i class="fa-solid fa-cart-shopping"></i><span class="count cart-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer">
+  <div class="mobile-drawer-backdrop"></div>
+  <div class="mobile-drawer-panel">
+    <button class="icon-btn mobile-drawer-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    <h4>ROV<span style="color:var(--primary);">AIRE</span></h4>
+    <div class="m-search"><i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Search products…"></div>
+    <details open><summary>Shop <i class="fa-solid fa-chevron-down"></i></summary><ul>
+      <li><a href="collection.html?cat=shirts">Shirts</a></li>
+      <li><a href="collection.html?cat=jeans">Jeans</a></li>
+      <li><a href="collection.html?cat=blazers">Blazers</a></li>
+    </ul></details>
+  </div>
+</div>
+
+<div class="container" style="padding-top:20px;">
+  <p class="breadcrumb" id="pdBreadcrumb"></p>
+</div>
+
+<div class="container">
+  <div class="product-layout">
+
+    <!-- Gallery -->
+    <div class="pd-gallery">
+      <div class="pd-thumbs" id="pdThumbs"></div>
+      <div class="pd-main-media" id="pdMainMedia">
+        <img id="pdMainImg" src="" alt="">
+        <span class="pd-zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Hover to zoom</span>
+      </div>
+    </div>
+
+    <!-- Info -->
+    <div class="pd-info">
+      <span class="p-brand" id="pdBrand"></span>
+      <h1 id="pdName"></h1>
+      <div class="pd-rating-row">
+        <span class="badge deal" id="pdRatingBadge"></span>
+        <span style="color:var(--ink-soft);font-size:.85rem;" id="pdReviewCount"></span>
+        <span style="color:var(--ink-soft);font-size:.85rem;" id="pdStock"></span>
+      </div>
+
+      <div class="pd-price-block">
+        <span class="price" id="pdPrice"></span>
+        <span class="p-mrp" id="pdMrp" style="font-size:1rem;"></span>
+        <span class="p-off" id="pdOff" style="font-size:1rem;"></span>
+        <div class="pd-emi"><i class="fa-solid fa-credit-card"></i> EMI starting at <b id="pdEmi"></b>/month — <a href="#">View plans</a></div>
+      </div>
+
+      <div class="pd-option-block">
+        <div class="pd-option-title">Select Color <span id="pdColorName"></span></div>
+        <div class="pd-colors" id="pdColors"></div>
+      </div>
+
+      <div class="pd-option-block">
+        <div class="pd-option-title">Select Size <span><a href="#" class="pd-size-guide" id="sizeGuideLink">Size Chart</a></span></div>
+        <div class="pd-sizes" id="pdSizes"></div>
+      </div>
+
+      <div class="pd-option-block">
+        <div class="pd-option-title">Quantity</div>
+        <div class="qty-selector">
+          <button id="qtyMinus" aria-label="Decrease quantity">−</button>
+          <span id="qtyVal">1</span>
+          <button id="qtyPlus" aria-label="Increase quantity">+</button>
+        </div>
+      </div>
+
+      <div class="pd-actions">
+        <button class="pd-wishlist-btn" id="pdWishlistBtn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+        <button class="btn outline" id="pdAddCartBtn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+        <button class="btn primary" id="pdBuyNowBtn"><i class="fa-solid fa-bolt"></i> Buy Now</button>
+      </div>
+
+      <div class="pd-delivery-check">
+        <input type="text" placeholder="Enter pincode to check delivery" id="pincodeInput" maxlength="6">
+        <button id="pincodeCheckBtn">Check</button>
+      </div>
+      <div class="pd-delivery-result" id="pincodeResult"><i class="fa-solid fa-truck-fast"></i> <span></span></div>
+
+      <div class="pd-seller">
+        <div><b>Sold by <span id="pdBrandSeller"></span> Official Store</b><span>98% Positive Ratings · GST Invoice Available</span></div>
+        <i class="fa-solid fa-circle-check" style="color:var(--deal);font-size:1.3rem;"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="pd-tabs">
+    <div class="pd-tab-nav">
+      <button class="pd-tab-btn active" data-tab="description">Description</button>
+      <button class="pd-tab-btn" data-tab="specs">Specifications</button>
+      <button class="pd-tab-btn" data-tab="fabric">Fabric Details</button>
+      <button class="pd-tab-btn" data-tab="wash">Wash Care</button>
+      <button class="pd-tab-btn" data-tab="size">Size Chart</button>
+      <button class="pd-tab-btn" data-tab="reviews">Customer Reviews</button>
+      <button class="pd-tab-btn" data-tab="qa">Questions &amp; Answers</button>
+    </div>
+
+    <div class="pd-tab-panel active" data-panel="description">
+      <p id="pdDescription" style="color:var(--ink-soft);line-height:1.8;max-width:760px;"></p>
+    </div>
+
+    <div class="pd-tab-panel" data-panel="specs">
+      <table class="spec-table" id="pdSpecTable"></table>
+    </div>
+
+    <div class="pd-tab-panel" data-panel="fabric">
+      <p style="color:var(--ink-soft);line-height:1.8;max-width:760px;">Crafted from premium, breathable material selected for durability and all-day comfort. Pre-shrunk and colorfast-tested to hold shape and tone wash after wash.</p>
+    </div>
+
+    <div class="pd-tab-panel" data-panel="wash">
+      <p style="color:var(--ink-soft);line-height:1.8;max-width:760px;">Machine wash cold with like colors. Do not bleach. Tumble dry low. Warm iron if needed. Dry clean recommended for blazers, coats and ethnic wear.</p>
+    </div>
+
+    <div class="pd-tab-panel" data-panel="size">
+      <table class="spec-table">
+        <tr><td>S</td><td>Chest 36–38in · Waist 30–32in</td></tr>
+        <tr><td>M</td><td>Chest 38–40in · Waist 32–34in</td></tr>
+        <tr><td>L</td><td>Chest 40–42in · Waist 34–36in</td></tr>
+        <tr><td>XL</td><td>Chest 42–44in · Waist 36–38in</td></tr>
+        <tr><td>XXL</td><td>Chest 44–46in · Waist 38–40in</td></tr>
+      </table>
+    </div>
+
+    <div class="pd-tab-panel" data-panel="reviews">
+      <div class="review-summary">
+        <div class="review-score">
+          <b id="pdReviewScore"></b>
+          <div class="stars" id="pdReviewStars"></div>
+          <span style="font-size:.8rem;color:var(--ink-soft);" id="pdReviewTotal"></span>
+        </div>
+        <div class="review-bars">
+          <div class="review-bar-row">5★<div class="bar"><span style="width:68%;"></span></div>68%</div>
+          <div class="review-bar-row">4★<div class="bar"><span style="width:20%;"></span></div>20%</div>
+          <div class="review-bar-row">3★<div class="bar"><span style="width:7%;"></span></div>7%</div>
+          <div class="review-bar-row">2★<div class="bar"><span style="width:3%;"></span></div>3%</div>
+          <div class="review-bar-row">1★<div class="bar"><span style="width:2%;"></span></div>2%</div>
+        </div>
+      </div>
+      <div id="pdReviewsList"></div>
+    </div>
+
+    <div class="pd-tab-panel" data-panel="qa">
+      <div class="qa-item"><div class="qa-q"><i class="fa-solid fa-circle-question"></i> Is this true to size?</div><div class="qa-a">Yes, this fits true to size for most customers. If you're between sizes, we recommend sizing up.</div></div>
+      <div class="qa-item"><div class="qa-q"><i class="fa-solid fa-circle-question"></i> Can I return this if it doesn't fit?</div><div class="qa-a">Yes, unworn items with tags can be returned within 7 days for a full refund or exchange.</div></div>
+      <div class="qa-item"><div class="qa-q"><i class="fa-solid fa-circle-question"></i> Is Cash on Delivery available?</div><div class="qa-a">Yes, COD is available on orders below ₹10,000 in most serviceable pincodes.</div></div>
+    </div>
+  </div>
+
+  <!-- Frequently bought together -->
+  <section class="section">
+    <div class="section-head reveal"><div><div class="eyebrow">Complete The Look</div><h2>Frequently Bought Together</h2></div></div>
+    <div class="rail-scroller" id="fbtRow"></div>
+  </section>
+
+  <!-- Similar products -->
+  <section class="section">
+    <div class="section-head reveal"><div><div class="eyebrow">You May Also Like</div><h2>Similar Products</h2></div></div>
+    <div class="product-row" id="similarRow"></div>
+  </section>
+
+  <!-- Recently viewed -->
+  <section class="section" id="recentlyViewedSection" style="display:none;">
+    <div class="section-head reveal"><div><div class="eyebrow">Continue Browsing</div><h2>Recently Viewed</h2></div></div>
+    <div class="rail-scroller" id="recentlyViewedRow"></div>
+  </section>
+</div>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand" style="color:#fff;">ROV<span class="accent">AIRE</span></a>
+      <p>Premium men's fashion for the boardroom, the weekend and everything between.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+    <div><h5>Shop</h5><ul><li><a href="collection.html?cat=shirts">Shirts</a></li><li><a href="collection.html?cat=jeans">Jeans</a></li><li><a href="collection.html?cat=blazers">Blazers</a></li></ul></div>
+    <div><h5>Help</h5><ul><li><a href="#">Track Order</a></li><li><a href="#">Returns & Exchanges</a></li><li><a href="#">Size Guide</a></li></ul></div>
+    <div><h5>Company</h5><ul><li><a href="#">About Us</a></li><li><a href="#">Careers</a></li></ul></div>
+    <div><h5>Account</h5><ul><li><a href="login.html">Login</a></li><li><a href="cart.html">My Cart</a></li></ul></div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; <span class="current-year"></span> Rovaire. All rights reserved.</span>
+    <div class="pay-icons"><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-google-pay"></i></div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/main.js"></script>
+<script src="js/product.js"></script>
+</body>
+</html>

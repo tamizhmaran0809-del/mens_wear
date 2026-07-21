@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — Rovaire</title>
+<meta name="description" content="Log in or create your Rovaire account.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="login-body">
+
+<div class="login-shell">
+  <div class="login-promo">
+    <a href="index.html" class="brand" style="color:#fff;">ROV<span class="accent">AIRE</span></a>
+    <div class="promo-mid">
+      <h2>Style that shows up<br>when you do.</h2>
+      <p>Join thousands of members getting early access to drops, member-only pricing and free express delivery.</p>
+    </div>
+    <div class="promo-stats">
+      <div><b>2M+</b><span>Happy Customers</span></div>
+      <div><b>15K+</b><span>Products</span></div>
+      <div><b>4.7★</b><span>Average Rating</span></div>
+    </div>
+    <div class="promo-orb"></div>
+  </div>
+
+  <div class="login-form-side">
+    <div class="login-tabs">
+      <button class="active" data-tab="login">Log In</button>
+      <button data-tab="signup">Sign Up</button>
+    </div>
+
+    <!-- LOGIN FORM -->
+    <div id="loginPane">
+      <h3>Welcome back</h3>
+      <p class="sub">Log in to continue to your account</p>
+      <form id="loginForm" novalidate>
+        <div class="field-group" id="loginIdGroup">
+          <label for="loginId">Email or Mobile Number</label>
+          <div class="input-wrap"><input type="text" id="loginId" placeholder="you@example.com or 98765 43210"></div>
+          <span class="err-msg">Please enter a valid email or 10-digit mobile number.</span>
+        </div>
+        <div class="field-group" id="loginPassGroup">
+          <label for="loginPass">Password</label>
+          <div class="input-wrap">
+            <input type="password" id="loginPass" placeholder="Enter your password">
+            <button type="button" class="toggle-pass" aria-label="Show password"><i class="fa-regular fa-eye"></i></button>
+          </div>
+          <span class="err-msg">Password must be at least 6 characters.</span>
+        </div>
+        <div class="form-row-between">
+          <label class="remember-me"><input type="checkbox"> Remember me</label>
+          <a href="#" id="forgotLink">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn primary block">Log In</button>
+      </form>
+    </div>
+
+    <!-- SIGNUP FORM -->
+    <div id="signupPane" style="display:none;">
+      <h3>Create your account</h3>
+      <p class="sub">It only takes a minute</p>
+      <form id="signupForm" novalidate>
+        <div class="field-group">
+          <label for="suName">Full Name</label>
+          <div class="input-wrap"><input type="text" id="suName" placeholder="Your full name"></div>
+          <span class="err-msg">Please enter your name.</span>
+        </div>
+        <div class="field-group">
+          <label for="suEmail">Email or Mobile Number</label>
+          <div class="input-wrap"><input type="text" id="suEmail" placeholder="you@example.com or 98765 43210"></div>
+          <span class="err-msg">Please enter a valid email or 10-digit mobile number.</span>
+        </div>
+        <div class="field-group">
+          <label for="suPass">Password</label>
+          <div class="input-wrap">
+            <input type="password" id="suPass" placeholder="Create a password">
+            <button type="button" class="toggle-pass" aria-label="Show password"><i class="fa-regular fa-eye"></i></button>
+          </div>
+          <span class="err-msg">Password must be at least 6 characters.</span>
+        </div>
+        <button type="submit" class="btn primary block" style="margin-top:6px;">Create Account</button>
+      </form>
+    </div>
+
+    <div class="divider-or">or continue with</div>
+    <div class="social-row">
+      <button class="social-btn google" id="googleBtn"><i class="fa-brands fa-google"></i> Google</button>
+      <button class="social-btn facebook" id="facebookBtn"><i class="fa-brands fa-facebook"></i> Facebook</button>
+    </div>
+
+    <p class="signup-cta" id="switchCta">New here? <a href="#" id="switchToSignup">Create an account</a></p>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

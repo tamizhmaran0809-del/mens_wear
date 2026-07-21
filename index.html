@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rovaire — Premium Men's Fashion</title>
+<meta name="description" content="Rovaire — premium men's fashion. Shirts, denim, blazers, ethnic wear and more, curated for every occasion.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div id="pageLoader"><div class="loader-mark">ROVAIRE</div></div>
+
+<header class="site-header">
+  <div class="container header-top">
+    <button class="icon-btn mobile-toggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+    <a href="index.html" class="brand">ROV<span class="accent">AIRE</span></a>
+
+    <ul class="mega-nav">
+      <li><a href="index.html">Home </a>
+      <li><a href="collection.html">Shop <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="mega-panel">
+          <div><h6>Topwear</h6>
+            <a href="collection.html?cat=shirts">Shirts</a>
+            <a href="collection.html?cat=tshirts">T-Shirts</a>
+            <a href="collection.html?cat=hoodies">Hoodies</a>
+          </div>
+          <div><h6>Bottomwear</h6>
+            <a href="collection.html?cat=jeans">Jeans</a>
+            <a href="collection.html?cat=trousers">Trousers</a>
+          </div>
+          <div><h6>Outerwear</h6>
+            <a href="collection.html?cat=jackets">Jackets</a>
+            <a href="collection.html?cat=blazers">Blazers</a>
+            <a href="collection.html?cat=ethnic-wear">Ethnic Wear</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="collection.html?occasion=formal-wear">Formal</a></li>
+      <li><a href="collection.html?occasion=casual-wear">Casual</a></li>
+      <li><a href="collection.html?occasion=ethnic-wear">Ethnic</a></li>
+      <li><a href="new.html">New Arrivals</a></li>
+    </ul>
+
+    <div class="search-bar">
+      <i class="fa-solid fa-magnifying-glass" style="color:var(--ink-soft);"></i>
+      <input type="text" placeholder="Search for shirts, jeans, brands…">
+      <button aria-label="Search"><i class="fa-solid fa-arrow-right"></i></button>
+      <div class="live-search-panel"></div>
+    </div>
+
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+      <a href="login.html" class="icon-btn" aria-label="Account"><i class="fa-regular fa-user"></i></a>
+      <a href="cart.html" class="icon-btn" aria-label="Wishlist" style="position:relative;"><i class="fa-regular fa-heart"></i><span class="count wishlist-count">0</span></a>
+      <a href="cart.html" class="icon-btn" aria-label="Cart" style="position:relative;"><i class="fa-solid fa-cart-shopping"></i><span class="count cart-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer">
+  <div class="mobile-drawer-backdrop"></div>
+  <div class="mobile-drawer-panel">
+    <button class="icon-btn mobile-drawer-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    <h4>ROV<span style="color:var(--primary);">AIRE</span></h4>
+    <div class="m-search"><i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Search products…"></div>
+    <details open><summary>Shop <i class="fa-solid fa-chevron-down"></i></summary><ul>
+      <li><a href="collection.html?cat=shirts">Shirts</a></li>
+      <li><a href="collection.html?cat=jeans">Jeans</a></li>
+      <li><a href="collection.html?cat=blazers">Blazers</a></li>
+      <li><a href="collection.html?cat=jackets">Jackets</a></li>
+      <li><a href="collection.html?cat=ethnic-wear">Ethnic Wear</a></li>
+    </ul></details>
+    <details><summary>Occasion <i class="fa-solid fa-chevron-down"></i></summary><ul>
+      <li><a href="collection.html?occasion=formal-wear">Formal</a></li>
+      <li><a href="collection.html?occasion=casual-wear">Casual</a></li>
+    </ul></details>
+    <details><summary>Account <i class="fa-solid fa-chevron-down"></i></summary><ul>
+      <li><a href="login.html">Login / Sign Up</a></li>
+      <li><a href="cart.html">My Cart</a></li>
+    </ul></details>
+  </div>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-track" id="heroTrack">
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=1600&auto=format&fit=crop');">
+      <div class="container"><div class="hero-copy">
+        <span class="eyebrow">New Season</span>
+        <h1>Tailored for<br>every ambition</h1>
+        <p>Premium fits, curated fabrics, and everyday essentials — built for the modern man.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="collection.html" class="btn primary">Shop New Arrivals <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="add-product.html" class="btn outline" style="background:rgba(255,255,255,.1);border-color:#fff;color:#fff;"><i class="fa-solid fa-plus"></i> New Product</a>
+        </div>
+      </div></div>
+    </div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1593032465175-481ac7f401a0?q=80&w=1600&auto=format&fit=crop');">
+      <div class="container"><div class="hero-copy">
+        <span class="eyebrow">Limited Time</span>
+        <h1>Up to 40% off<br>on formal wear</h1>
+        <p>Boardroom-ready blazers and shirts, tailored to fit and priced to wear.</p>
+        <a href="collection.html?occasion=formal-wear" class="btn primary">Explore Formal <i class="fa-solid fa-arrow-right"></i></a>
+      </div></div>
+    </div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1622470953794-aa9c70b0fb9d?q=80&w=1600&auto=format&fit=crop');">
+      <div class="container"><div class="hero-copy">
+        <span class="eyebrow">Wedding Edit</span>
+        <h1>Ethnic wear for<br>the big day</h1>
+        <p>Sherwanis and bandhgalas finished with hand embroidery detail.</p>
+        <a href="collection.html?occasion=ethnic-wear" class="btn primary">View Ethnic Edit <i class="fa-solid fa-arrow-right"></i></a>
+      </div></div>
+    </div>
+  </div>
+  <button class="hero-arrow prev" aria-label="Previous slide"><i class="fa-solid fa-chevron-left"></i></button>
+  <button class="hero-arrow next" aria-label="Next slide"><i class="fa-solid fa-chevron-right"></i></button>
+  <div class="hero-dots" id="heroDots"></div>
+</section>
+
+<div class="container">
+  <div class="trust-strip reveal">
+    <div class="trust-item"><i class="fa-solid fa-truck-fast"></i><div><b>Free Delivery</b><span>On orders above ₹999</span></div></div>
+    <div class="trust-item"><i class="fa-solid fa-rotate-left"></i><div><b>Easy Returns</b><span>7-day return policy</span></div></div>
+    <div class="trust-item"><i class="fa-solid fa-shield-halved"></i><div><b>Secure Payment</b><span>100% protected checkout</span></div></div>
+    <div class="trust-item"><i class="fa-solid fa-headset"></i><div><b>24/7 Support</b><span>Always here to help</span></div></div>
+  </div>
+</div>
+
+<!-- ================= CATEGORIES ================= -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal"><div><div class="eyebrow">Shop By</div><h2>Featured Categories</h2></div></div>
+    <div class="category-scroller reveal">
+      <a href="collection.html?cat=shirts" class="cat-chip"><div class="cat-img"><img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=300&auto=format&fit=crop" alt="Shirts"></div><span>Shirts</span></a>
+      <a href="collection.html?cat=tshirts" class="cat-chip"><div class="cat-img"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=300&auto=format&fit=crop" alt="T-Shirts"></div><span>T-Shirts</span></a>
+      <a href="collection.html?cat=jeans" class="cat-chip"><div class="cat-img"><img src="https://images.unsplash.com/photo-1542272604-787c3835535d?q=80&w=300&auto=format&fit=crop" alt="Jeans"></div><span>Jeans</span></a>
+      <a href="collection.html?cat=trousers" class="cat-chip"><div class="cat-img"><img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?q=80&w=300&auto=format&fit=crop" alt="Trousers"></div><span>Trousers</span></a>
+      <a href="collection.html?cat=hoodies" class="cat-chip"><div class="cat-img"><img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?q=80&w=300&auto=format&fit=crop" alt="Hoodies"></div><span>Hoodies</span></a>
+      <a href="collection.html?cat=jackets" class="cat-chip"><div class="cat-img"><img src="https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?q=80&w=300&auto=format&fit=crop" alt="Jackets"></div><span>Jackets</span></a>
+      <a href="collection.html?cat=blazers" class="cat-chip"><div class="cat-img"><img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=300&auto=format&fit=crop" alt="Blazers"></div><span>Blazers</span></a>
+      <a href="collection.html?cat=ethnic-wear" class="cat-chip"><div class="cat-img"><img src="https://images.unsplash.com/photo-1610189844772-a5b48db8b301?q=80&w=300&auto=format&fit=crop" alt="Ethnic Wear"></div><span>Ethnic</span></a>
+      <a href="collection.html?age=kids" class="cat-chip"><div class="cat-img"><img src="https://picsum.photos/seed/boys-tee-01/300/300" alt="Boys / Kids Wear"></div><span>Kids</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRENDING ================= -->
+<section class="section section-alt" style="background:var(--surface);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">Curated For You</div><h2>Trending Collections</h2><p class="sub">Handpicked pieces our customers can't stop buying</p></div>
+      <a href="collection.html" class="view-all">View All <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="product-row" id="trendingRow"></div>
+  </div>
+</section>
+
+<!-- ================= FLASH SALE ================= -->
+<section class="section">
+  <div class="container">
+    <div class="flash-head reveal">
+      <h3><i class="fa-solid fa-bolt"></i> Limited Time Offers</h3>
+      <div class="countdown" id="countdown">
+        <div class="cd-box"><b id="cdH">00</b><span>Hrs</span></div>
+        <div class="cd-box"><b id="cdM">00</b><span>Min</span></div>
+        <div class="cd-box"><b id="cdS">00</b><span>Sec</span></div>
+      </div>
+    </div>
+    <div class="flash-body reveal">
+      <div class="product-row cols-4" id="flashRow"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OFFERS ================= -->
+<section class="section section-alt" style="background:var(--surface);">
+  <div class="container">
+    <div class="offer-strip reveal">
+      <a href="collection.html?occasion=formal-wear" class="offer-card"><img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=800&auto=format&fit=crop" alt="Formal wear offer"><div class="oc-content"><h4>Formal Edit</h4><span>Up to 35% off</span></div></a>
+      <a href="collection.html?occasion=casual-wear" class="offer-card"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=800&auto=format&fit=crop" alt="Casual wear offer"><div class="oc-content"><h4>Weekend Casuals</h4><span>Flat 30% off</span></div></a>
+      <a href="collection.html?occasion=ethnic-wear" class="offer-card"><img src="https://images.unsplash.com/photo-1610189844772-a5b48db8b301?q=80&w=800&auto=format&fit=crop" alt="Ethnic wear offer"><div class="oc-content"><h4>Wedding Edit</h4><span>New Arrivals</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BEST SELLERS ================= -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">Most Loved</div><h2>Best Sellers</h2></div>
+      <a href="collection.html" class="view-all">View All <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="product-row" id="bestsellerRow"></div>
+  </div>
+</section>
+
+<!-- ================= NEW ARRIVALS ================= -->
+<section class="section section-alt" style="background:var(--surface);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">Just Landed</div><h2>New Arrivals</h2></div>
+      <a href="collection.html" class="view-all">View All <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="product-row" id="newArrivalsRow"></div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="section">
+  <div class="container">
+    <div class="section-head text-center reveal" style="justify-content:center;text-align:center;"><div><div class="eyebrow" style="justify-content:center;">Reviews</div><h2>What our customers say</h2></div></div>
+    <div class="testi-wrap reveal">
+      <div class="testi-track">
+        <div class="testi-slide active">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"The fit is exactly what I expect from a premium brand — finally an online store that gets sizing right."</p>
+          <div class="testi-person"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Customer"><div><b>Arjun Mehta</b><span>Verified Buyer</span></div></div>
+        </div>
+        <div class="testi-slide">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Fast delivery, great packaging, and the blazer quality exceeded what I paid for. Highly recommend."</p>
+          <div class="testi-person"><img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Customer"><div><b>Rohit Sharma</b><span>Verified Buyer</span></div></div>
+        </div>
+        <div class="testi-slide">
+          <div class="stars">★★★★☆</div>
+          <p class="quote">"Bought the wedding sherwani edit for my brother's wedding — compliments all evening. Worth it."</p>
+          <div class="testi-person"><img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Customer"><div><b>Vikram Iyer</b><span>Verified Buyer</span></div></div>
+        </div>
+      </div>
+      <div class="testi-nav">
+        <button class="testi-prev" aria-label="Previous review"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="testi-next" aria-label="Next review"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NEWSLETTER ================= -->
+<div class="newsletter-band">
+  <div class="container">
+    <div><h3>Get 10% off your first order</h3><p>Sign up for restocks, drops and members-only offers.</p></div>
+    <form class="newsletter-form"><input type="email" placeholder="Enter your email" required><button type="submit">Subscribe</button></form>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand" style="color:#fff;">ROV<span class="accent">AIRE</span></a>
+      <p>Premium men's fashion for the boardroom, the weekend and everything between.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+    <div><h5>Shop</h5><ul>
+      <li><a href="collection.html?cat=shirts">Shirts</a></li>
+      <li><a href="collection.html?cat=jeans">Jeans</a></li>
+      <li><a href="collection.html?cat=blazers">Blazers</a></li>
+      <li><a href="collection.html?cat=ethnic-wear">Ethnic Wear</a></li>
+    </ul></div>
+    <div><h5>Help</h5><ul>
+      <li><a href="#">Track Order</a></li>
+      <li><a href="#">Returns & Exchanges</a></li>
+      <li><a href="#">Shipping Info</a></li>
+      <li><a href="#">Size Guide</a></li>
+    </ul></div>
+    <div><h5>Company</h5><ul>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">Press</a></li>
+      <li><a href="#">Sustainability</a></li>
+    </ul></div>
+    <div><h5>Account</h5><ul>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="cart.html">My Cart</a></li>
+      <li><a href="#">Order History</a></li>
+      <li><a href="#">Support</a></li>
+    </ul></div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; <span class="current-year"></span> Rovaire. All rights reserved.</span>
+    <div class="pay-icons"><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-google-pay"></i><i class="fa-solid fa-money-bill-wave"></i></div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/main.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

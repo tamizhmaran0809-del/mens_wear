@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add New Product — Rovaire</title>
+<meta name="description" content="Add a new product to the Rovaire catalog.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/add-product.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div id="pageLoader"><div class="loader-mark">ROVAIRE</div></div>
+
+<header class="site-header">
+  <div class="container header-top">
+    <button class="icon-btn mobile-toggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+    <a href="index.html" class="brand">ROV<span class="accent">AIRE</span></a>
+    <ul class="mega-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="collection.html">Shop</a></li>
+      <li><a href="add-product.html" style="color:var(--primary);">Add Product</a></li>
+    </ul>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+      <a href="login.html" class="icon-btn" aria-label="Account"><i class="fa-regular fa-user"></i></a>
+      <a href="cart.html" class="icon-btn" aria-label="Cart" style="position:relative;"><i class="fa-solid fa-cart-shopping"></i><span class="count cart-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer">
+  <div class="mobile-drawer-backdrop"></div>
+  <div class="mobile-drawer-panel">
+    <button class="icon-btn mobile-drawer-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    <h4>ROV<span style="color:var(--primary);">AIRE</span></h4>
+    <ul><li><a href="index.html">Home</a></li><li><a href="collection.html">Shop</a></li><li><a href="add-product.html">Add Product</a></li></ul>
+  </div>
+</div>
+
+<section class="page-banner">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span class="current">Add Product</span></p>
+    <h1>Add New Product</h1>
+  </div>
+</section>
+
+<div class="container section" style="max-width:900px;">
+  <form id="addProductForm" class="ap-form" novalidate>
+
+    <div class="ap-grid">
+      <div class="field-group">
+        <label for="apName">Product Name</label>
+        <div class="input-wrap"><input type="text" id="apName" placeholder="e.g. Classic Oxford Shirt" required></div>
+      </div>
+      <div class="field-group">
+        <label for="apBrand">Brand</label>
+        <div class="input-wrap"><input type="text" id="apBrand" placeholder="e.g. URBAN THREAD" required></div>
+      </div>
+    </div>
+
+    <div class="ap-grid">
+      <div class="field-group">
+        <label for="apCategory">Category</label>
+        <div class="input-wrap">
+          <select id="apCategory" required>
+            <option value="" disabled selected>Select category</option>
+            <option value="shirts">Shirts</option>
+            <option value="tshirts">T-Shirts</option>
+            <option value="jeans">Jeans</option>
+            <option value="trousers">Trousers</option>
+            <option value="hoodies">Hoodies</option>
+            <option value="jackets">Jackets</option>
+            <option value="blazers">Blazers</option>
+            <option value="ethnic-wear">Ethnic Wear</option>
+          </select>
+        </div>
+      </div>
+      <div class="field-group">
+        <label for="apOccasion">Occasion</label>
+        <div class="input-wrap">
+          <select id="apOccasion" required>
+            <option value="" disabled selected>Select occasion</option>
+            <option value="formal-wear">Formal Wear</option>
+            <option value="casual-wear">Casual Wear</option>
+            <option value="ethnic-wear">Ethnic Wear</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="ap-grid">
+      <div class="field-group">
+        <label for="apPrice">Selling Price (₹)</label>
+        <div class="input-wrap"><input type="number" id="apPrice" min="1" placeholder="1299" required></div>
+      </div>
+      <div class="field-group">
+        <label for="apMrp">MRP (₹)</label>
+        <div class="input-wrap"><input type="number" id="apMrp" min="1" placeholder="2199" required></div>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label>Available Sizes</label>
+      <div class="ap-size-row">
+        <label class="ap-chip"><input type="checkbox" value="S"> S</label>
+        <label class="ap-chip"><input type="checkbox" value="M"> M</label>
+        <label class="ap-chip"><input type="checkbox" value="L"> L</label>
+        <label class="ap-chip"><input type="checkbox" value="XL"> XL</label>
+        <label class="ap-chip"><input type="checkbox" value="XXL"> XXL</label>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label>Available Colors</label>
+      <div class="ap-color-row" id="apColorRow">
+        <input type="color" value="#1A2333" class="ap-color-input">
+        <input type="color" value="#FFFFFF" class="ap-color-input">
+        <button type="button" id="apAddColor" class="ap-add-color"><i class="fa-solid fa-plus"></i></button>
+      </div>
+    </div>
+
+    <div class="ap-grid">
+      <div class="field-group">
+        <label for="apImg1">Primary Image URL</label>
+        <div class="input-wrap"><input type="url" id="apImg1" placeholder="https://…" required></div>
+      </div>
+      <div class="field-group">
+        <label for="apImg2">Secondary Image URL</label>
+        <div class="input-wrap"><input type="url" id="apImg2" placeholder="https://… (optional)"></div>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label for="apTag">Badge Tag (optional)</label>
+      <div class="input-wrap">
+        <select id="apTag">
+          <option value="">None</option>
+          <option value="New">New</option>
+          <option value="Bestseller">Bestseller</option>
+          <option value="Trending">Trending</option>
+          <option value="Sale">Sale</option>
+          <option value="Premium">Premium</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="submit" class="btn primary block ap-submit"><i class="fa-solid fa-plus"></i> Add Product to Catalog</button>
+    <p class="ap-note">New products are added to this session's catalog and will appear across Home, Collection, and Product pages.</p>
+  </form>
+
+  <div class="ap-preview" id="apPreview" style="display:none;">
+    <h3>Preview</h3>
+    <div class="product-row cols-4" id="apPreviewCard"></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand" style="color:#fff;">ROV<span class="accent">AIRE</span></a>
+      <p>Premium men's fashion for the boardroom, the weekend and everything between.</p>
+    </div>
+    <div><h5>Shop</h5><ul><li><a href="collection.html?cat=shirts">Shirts</a></li><li><a href="collection.html?cat=jeans">Jeans</a></li></ul></div>
+    <div><h5>Help</h5><ul><li><a href="#">Track Order</a></li><li><a href="#">Returns & Exchanges</a></li></ul></div>
+    <div><h5>Account</h5><ul><li><a href="login.html">Login</a></li><li><a href="cart.html">My Cart</a></li></ul></div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; <span class="current-year"></span> Rovaire. All rights reserved.</span>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/main.js"></script>
+<script src="js/add-product.js"></script>
+</body>
+</html>

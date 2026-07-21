@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Cart — Rovaire</title>
+<meta name="description" content="Review your cart, apply coupons and checkout on Rovaire.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/cart.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div id="pageLoader"><div class="loader-mark">ROVAIRE</div></div>
+
+<header class="site-header">
+  <div class="container header-top">
+    <button class="icon-btn mobile-toggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+    <a href="index.html" class="brand">ROV<span class="accent">AIRE</span></a>
+    <ul class="mega-nav">
+      <li><a href="collection.html">Shop <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="mega-panel">
+          <div><h6>Topwear</h6><a href="collection.html?cat=shirts">Shirts</a><a href="collection.html?cat=tshirts">T-Shirts</a></div>
+          <div><h6>Bottomwear</h6><a href="collection.html?cat=jeans">Jeans</a><a href="collection.html?cat=trousers">Trousers</a></div>
+          <div><h6>Outerwear</h6><a href="collection.html?cat=jackets">Jackets</a><a href="collection.html?cat=blazers">Blazers</a></div>
+        </div>
+      </li>
+      <li><a href="collection.html?occasion=formal-wear">Formal</a></li>
+      <li><a href="collection.html?occasion=casual-wear">Casual</a></li>
+      <li><a href="collection.html">New Arrivals</a></li>
+    </ul>
+    <div class="search-bar">
+      <i class="fa-solid fa-magnifying-glass" style="color:var(--ink-soft);"></i>
+      <input type="text" placeholder="Search for shirts, jeans, brands…">
+      <button aria-label="Search"><i class="fa-solid fa-arrow-right"></i></button>
+      <div class="live-search-panel"></div>
+    </div>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+      <a href="login.html" class="icon-btn" aria-label="Account"><i class="fa-regular fa-user"></i></a>
+      <a href="cart.html" class="icon-btn" aria-label="Wishlist" style="position:relative;"><i class="fa-regular fa-heart"></i><span class="count wishlist-count">0</span></a>
+      <a href="cart.html" class="icon-btn" aria-label="Cart" style="position:relative;color:var(--primary);"><i class="fa-solid fa-cart-shopping"></i><span class="count cart-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer">
+  <div class="mobile-drawer-backdrop"></div>
+  <div class="mobile-drawer-panel">
+    <button class="icon-btn mobile-drawer-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    <h4>ROV<span style="color:var(--primary);">AIRE</span></h4>
+    <details open><summary>Shop <i class="fa-solid fa-chevron-down"></i></summary><ul>
+      <li><a href="collection.html?cat=shirts">Shirts</a></li>
+      <li><a href="collection.html?cat=jeans">Jeans</a></li>
+    </ul></details>
+  </div>
+</div>
+
+<div class="container section">
+  <p class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span class="current">Cart</span></p>
+
+  <div class="cart-steps">
+    <span class="step active">1. Bag</span><i class="fa-solid fa-chevron-right"></i>
+    <span class="step">2. Address</span><i class="fa-solid fa-chevron-right"></i>
+    <span class="step">3. Payment</span>
+  </div>
+
+  <div class="cart-layout">
+    <div>
+      <div class="cart-panel" id="cartPanel">
+        <div class="cart-panel-head"><h3>Shopping Bag</h3><span id="cartItemCount"></span></div>
+        <div id="cartItemsWrap"></div>
+        <div class="coupon-box" id="couponBox">
+          <input type="text" placeholder="Enter coupon code (try ROVAIRE10)" id="couponInput">
+          <button id="couponApplyBtn">Apply</button>
+        </div>
+        <div class="coupon-applied" id="couponApplied"><span><i class="fa-solid fa-tag"></i> <span id="couponLabel"></span></span><button id="couponRemoveBtn"><i class="fa-solid fa-xmark"></i></button></div>
+      </div>
+
+      <div class="empty-cart" id="emptyCart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <h3>Your bag is empty</h3>
+        <p>Looks like you haven't added anything yet. Let's fix that.</p>
+        <a href="collection.html" class="btn primary">Continue Shopping</a>
+      </div>
+
+      <div class="cart-panel" id="savedPanel" style="margin-top:20px;display:none;">
+        <div class="cart-panel-head"><h3>Saved For Later</h3><span id="savedItemCount"></span></div>
+        <div id="savedItemsWrap"></div>
+      </div>
+    </div>
+
+    <aside class="summary-card" id="summaryCard">
+      <h3>Price Details</h3>
+      <div class="summary-row"><span id="summaryQtyLabel">Price (0 items)</span><span id="summaryPrice">₹0</span></div>
+      <div class="summary-row discount"><span>Discount</span><span id="summaryDiscount">−₹0</span></div>
+      <div class="summary-row"><span>Coupon Discount</span><span id="summaryCoupon">−₹0</span></div>
+      <div class="summary-row"><span>Delivery Charges</span><span id="summaryDelivery">Free</span></div>
+      <div class="summary-total"><span>Total Amount</span><span id="summaryTotal">₹0</span></div>
+      <div class="summary-savings" id="summarySavings"></div>
+      <button class="btn primary block" id="checkoutBtn" style="margin-top:8px;">Proceed to Checkout <i class="fa-solid fa-arrow-right"></i></button>
+    </aside>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand" style="color:#fff;">ROV<span class="accent">AIRE</span></a>
+      <p>Premium men's fashion for the boardroom, the weekend and everything between.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+    </div>
+    <div><h5>Shop</h5><ul><li><a href="collection.html?cat=shirts">Shirts</a></li><li><a href="collection.html?cat=jeans">Jeans</a></li></ul></div>
+    <div><h5>Help</h5><ul><li><a href="#">Track Order</a></li><li><a href="#">Returns & Exchanges</a></li></ul></div>
+    <div><h5>Company</h5><ul><li><a href="#">About Us</a></li></ul></div>
+    <div><h5>Account</h5><ul><li><a href="login.html">Login</a></li></ul></div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; <span class="current-year"></span> Rovaire. All rights reserved.</span>
+    <div class="pay-icons"><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i></div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/main.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>

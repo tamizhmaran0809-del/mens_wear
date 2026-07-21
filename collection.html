@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop Men's Fashion — Rovaire</title>
+<meta name="description" content="Browse Rovaire's full collection of men's shirts, jeans, blazers, jackets and ethnic wear. Filter by age group, category, size, color and price.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/collection.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div id="pageLoader"><div class="loader-mark">ROVAIRE</div></div>
+
+<header class="site-header">
+  <div class="container header-top">
+    <button class="icon-btn mobile-toggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+    <a href="index.html" class="brand">ROV<span class="accent">AIRE</span></a>
+    <ul class="mega-nav">
+      <li><a href="collection.html">Shop <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="mega-panel">
+          <div><h6>Topwear</h6><a href="collection.html?cat=shirts">Shirts</a><a href="collection.html?cat=tshirts">T-Shirts</a><a href="collection.html?cat=hoodies">Hoodies</a></div>
+          <div><h6>Bottomwear</h6><a href="collection.html?cat=jeans">Jeans</a><a href="collection.html?cat=trousers">Trousers</a></div>
+          <div><h6>Outerwear</h6><a href="collection.html?cat=jackets">Jackets</a><a href="collection.html?cat=blazers">Blazers</a><a href="collection.html?cat=ethnic-wear">Ethnic Wear</a></div>
+        </div>
+      </li>
+      <li><a href="collection.html?occasion=formal-wear">Formal</a></li>
+      <li><a href="collection.html?occasion=casual-wear">Casual</a></li>
+      <li><a href="collection.html?occasion=ethnic-wear">Ethnic</a></li>
+      <li><a href="collection.html">New Arrivals</a></li>
+    </ul>
+    <div class="search-bar">
+      <i class="fa-solid fa-magnifying-glass" style="color:var(--ink-soft);"></i>
+      <input type="text" placeholder="Search for shirts, jeans, brands…">
+      <button aria-label="Search"><i class="fa-solid fa-arrow-right"></i></button>
+      <div class="live-search-panel"></div>
+    </div>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+      <a href="login.html" class="icon-btn" aria-label="Account"><i class="fa-regular fa-user"></i></a>
+      <a href="cart.html" class="icon-btn" aria-label="Wishlist" style="position:relative;"><i class="fa-regular fa-heart"></i><span class="count wishlist-count">0</span></a>
+      <a href="cart.html" class="icon-btn" aria-label="Cart" style="position:relative;"><i class="fa-solid fa-cart-shopping"></i><span class="count cart-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer">
+  <div class="mobile-drawer-backdrop"></div>
+  <div class="mobile-drawer-panel">
+    <button class="icon-btn mobile-drawer-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    <h4>ROV<span style="color:var(--primary);">AIRE</span></h4>
+    <div class="m-search"><i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Search products…"></div>
+    <details open><summary>Shop <i class="fa-solid fa-chevron-down"></i></summary><ul>
+      <li><a href="collection.html?cat=shirts">Shirts</a></li>
+      <li><a href="collection.html?cat=jeans">Jeans</a></li>
+      <li><a href="collection.html?cat=blazers">Blazers</a></li>
+      <li><a href="collection.html?cat=jackets">Jackets</a></li>
+      <li><a href="collection.html?cat=ethnic-wear">Ethnic Wear</a></li>
+    </ul></details>
+    <details><summary>Account <i class="fa-solid fa-chevron-down"></i></summary><ul>
+      <li><a href="login.html">Login / Sign Up</a></li>
+      <li><a href="cart.html">My Cart</a></li>
+    </ul></details>
+  </div>
+</div>
+
+<section class="page-banner">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span class="current">Shop</span></p>
+    <h1>Men's Fashion Collection</h1>
+  </div>
+</section>
+
+<div class="container">
+
+  <!-- Age group filter -->
+  <div class="age-group-bar">
+    <button class="age-chip active" data-age="all">All Ages</button>
+    <button class="age-chip" data-age="kids">Kids</button>
+    <button class="age-chip" data-age="teens">Teens</button>
+    <button class="age-chip" data-age="18-25">18–25</button>
+    <button class="age-chip" data-age="26-35">26–35</button>
+    <button class="age-chip" data-age="36-45">36–45</button>
+    <button class="age-chip" data-age="45+">45+</button>
+  </div>
+
+  <!-- Category tabs -->
+  <div class="cat-tabs">
+    <button class="cat-tab active" data-cat="all">All</button>
+    <button class="cat-tab" data-cat="shirts">Shirts</button>
+    <button class="cat-tab" data-cat="tshirts">T-Shirts</button>
+    <button class="cat-tab" data-cat="jeans">Jeans</button>
+    <button class="cat-tab" data-cat="trousers">Trousers</button>
+    <button class="cat-tab" data-cat="hoodies">Hoodies</button>
+    <button class="cat-tab" data-cat="jackets">Jackets</button>
+    <button class="cat-tab" data-cat="blazers">Blazers</button>
+    <button class="cat-tab" data-cat="ethnic-wear">Ethnic Wear</button>
+  </div>
+
+  <div class="collection-layout section" style="padding-top:12px;">
+
+    <!-- Filter sidebar -->
+    <div class="filter-backdrop"></div>
+    <aside class="filter-sidebar" id="filterSidebar">
+      <div class="filter-sidebar-head">
+        <h4>Filters</h4>
+        <button id="clearFilters">Clear All</button>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-group-title">Brand <i class="fa-solid fa-chevron-down"></i></div>
+        <div class="filter-group-body" id="brandFilterBody"></div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-group-title">Price Range <i class="fa-solid fa-chevron-down"></i></div>
+        <div class="filter-group-body">
+          <input type="range" min="500" max="15000" step="500" value="15000" class="range-slider" id="priceSlider">
+          <div class="range-values"><span>₹500</span><span id="priceSliderVal">₹15,000</span></div>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-group-title">Size <i class="fa-solid fa-chevron-down"></i></div>
+        <div class="filter-group-body">
+          <div class="size-row">
+            <button class="size-chip" data-size="S">S</button>
+            <button class="size-chip" data-size="M">M</button>
+            <button class="size-chip" data-size="L">L</button>
+            <button class="size-chip" data-size="XL">XL</button>
+            <button class="size-chip" data-size="XXL">XXL</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-group-title">Color <i class="fa-solid fa-chevron-down"></i></div>
+        <div class="filter-group-body">
+          <div class="swatch-row" id="colorFilterBody"></div>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-group-title">Fabric <i class="fa-solid fa-chevron-down"></i></div>
+        <div class="filter-group-body">
+          <label class="check-row"><input type="checkbox" value="cotton"> Cotton <span class="cnt">142</span></label>
+          <label class="check-row"><input type="checkbox" value="linen"> Linen <span class="cnt">58</span></label>
+          <label class="check-row"><input type="checkbox" value="denim"> Denim <span class="cnt">76</span></label>
+          <label class="check-row"><input type="checkbox" value="wool"> Wool <span class="cnt">34</span></label>
+          <label class="check-row"><input type="checkbox" value="silk"> Silk <span class="cnt">21</span></label>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-group-title">Sleeve Type <i class="fa-solid fa-chevron-down"></i></div>
+        <div class="filter-group-body">
+          <label class="check-row"><input type="checkbox" value="full"> Full Sleeve</label>
+          <label class="check-row"><input type="checkbox" value="half"> Half Sleeve</label>
+          <label class="check-row"><input type="checkbox" value="sleeveless"> Sleeveless</label>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-group-title">Fit Type <i class="fa-solid fa-chevron-down"></i></div>
+        <div class="filter-group-body">
+          <label class="check-row"><input type="checkbox" value="slim"> Slim Fit</label>
+          <label class="check-row"><input type="checkbox" value="regular"> Regular Fit</label>
+          <label class="check-row"><input type="checkbox" value="relaxed"> Relaxed Fit</label>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-group-title">Occasion <i class="fa-solid fa-chevron-down"></i></div>
+        <div class="filter-group-body" id="occasionFilterBody">
+          <label class="check-row"><input type="checkbox" value="formal-wear"> Formal Wear</label>
+          <label class="check-row"><input type="checkbox" value="casual-wear"> Casual Wear</label>
+          <label class="check-row"><input type="checkbox" value="ethnic-wear"> Ethnic Wear</label>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-group-title">Customer Rating <i class="fa-solid fa-chevron-down"></i></div>
+        <div class="filter-group-body" id="ratingFilterBody">
+          <label class="star-row"><input type="radio" name="ratingFilter" value="4"> 4★ &amp; above</label>
+          <label class="star-row"><input type="radio" name="ratingFilter" value="3"> 3★ &amp; above</label>
+          <label class="star-row"><input type="radio" name="ratingFilter" value="0" checked> All Ratings</label>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-group-title">Discount <i class="fa-solid fa-chevron-down"></i></div>
+        <div class="filter-group-body" id="discountFilterBody">
+          <label class="check-row"><input type="checkbox" value="50"> 50% or more</label>
+          <label class="check-row"><input type="checkbox" value="30"> 30% or more</label>
+          <label class="check-row"><input type="checkbox" value="10"> 10% or more</label>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Product results -->
+    <div>
+      <div class="active-filter-chips" id="activeFilterChips" style="display:none;"></div>
+
+      <div class="collection-toolbar">
+        <span class="result-count"><b id="resultCount">0</b> products found</span>
+        <div class="sort-select">
+          <i class="fa-solid fa-arrow-up-wide-short"></i>
+          <select id="sortSelect">
+            <option value="popular">Popularity</option>
+            <option value="low-high">Price: Low to High</option>
+            <option value="high-low">Price: High to Low</option>
+            <option value="rating">Customer Rating</option>
+            <option value="newest">Newest First</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="collection-grid" id="collectionGrid"></div>
+      <p class="no-results-msg" id="noResultsMsg">
+        <i class="fa-solid fa-magnifying-glass"></i><br>
+        No products match your filters — try clearing a few.<br>
+        <button class="no-results-clear">Clear All Filters</button>
+      </p>
+      <div class="pagination" id="pagination"></div>
+    </div>
+  </div>
+
+  <!-- Recently viewed -->
+  
+</div>
+
+<button class="filter-fab" id="filterFab"><i class="fa-solid fa-sliders"></i> Filters</button>
+
+<div class="newsletter-band">
+  <div class="container">
+    <div><h3>Get 10% off your first order</h3><p>Sign up for restocks, drops and members-only offers.</p></div>
+    <form class="newsletter-form"><input type="email" placeholder="Enter your email" required><button type="submit">Subscribe</button></form>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand" style="color:#fff;">ROV<span class="accent">AIRE</span></a>
+      <p>Premium men's fashion for the boardroom, the weekend and everything between.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+    <div><h5>Shop</h5><ul><li><a href="collection.html?cat=shirts">Shirts</a></li><li><a href="collection.html?cat=jeans">Jeans</a></li><li><a href="collection.html?cat=blazers">Blazers</a></li><li><a href="collection.html?cat=ethnic-wear">Ethnic Wear</a></li></ul></div>
+    <div><h5>Help</h5><ul><li><a href="#">Track Order</a></li><li><a href="#">Returns & Exchanges</a></li><li><a href="#">Shipping Info</a></li><li><a href="#">Size Guide</a></li></ul></div>
+    <div><h5>Company</h5><ul><li><a href="#">About Us</a></li><li><a href="#">Careers</a></li><li><a href="#">Press</a></li><li><a href="#">Sustainability</a></li></ul></div>
+    <div><h5>Account</h5><ul><li><a href="login.html">Login</a></li><li><a href="cart.html">My Cart</a></li><li><a href="#">Order History</a></li><li><a href="#">Support</a></li></ul></div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; <span class="current-year"></span> Rovaire. All rights reserved.</span>
+    <div class="pay-icons"><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-google-pay"></i><i class="fa-solid fa-money-bill-wave"></i></div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/main.js"></script>
+<script src="js/collection.js"></script>
+</body>
+</html>
